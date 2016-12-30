@@ -1,17 +1,17 @@
-info:
-        name: discovery-service
-        version:  ${project.version}
-
-        server:
-        port: 8761
-
-        spring:
-        profiles:
-        active: ${maven_spring.profiles.active}
-        application:
-        name: discovery
-
-        security:
-        user:
-        name: ${eureka.username:zcg}
-        password: ${eureka.password:123456}
+#info:
+#        name: discovery-service
+#        version:  ${project.version}
+#
+#        server:
+#        port: 8761
+#
+#        spring:
+#        profiles:
+#        active: ${maven_spring.profiles.active}
+#        application:
+#        name: discovery
+#
+##        security:
+##        user:
+##        name: ${eureka.username:zcg}
+##        password: ${eureka.password:123456}

@@ -1,41 +1,41 @@
----
-spring:
-  profiles: dev
-
-eureka:
-  host: localhost
-  instance:
-    hostname: localhost
-    metadata-map:
-      instanceId: ${spring.application.name}:${random.value}
-  client:
-    fetch-registry: false
-    register-with-eureka: false
-    serviceUrl:
-      defaultZone: http://${eureka.username:zcg}:${eureka.password:123456}@localhost:8761/eureka/
-
----
-spring:
-  profiles: peer01
-
-eureka:
-  instance:
-    hostname: ${eureka.instance.hostname}
-    metadata-map:
-      instanceId: ${spring.application.name}:${random.value}
-  client:
-    serviceUrl:
-      defaultZone: http://${eureka.username:zcg}:${eureka.password:123456}@${eureka.defaultZone.host}:${eureka.defaultZone.port:8761}/eureka/
-
----
-spring:
-  profiles: peer02
-
-eureka:
-  instance:
-    hostname: ${eureka.instance.hostname}
-    metadata-map:
-      instanceId: ${spring.application.name}:${random.value}
-  client:
-    serviceUrl:
-      defaultZone: http://${eureka.username:zcg}:${eureka.password:123456}@${eureka.defaultZone.host}:${eureka.defaultZone.port:8761}/eureka/
+#---
+#spring:
+#  profiles: dev
+#
+#eureka:
+#  host: localhost
+#  instance:
+#    hostname: localhost
+#    metadata-map:
+#      instanceId: ${spring.application.name}:${random.value}
+#  client:
+#    fetch-registry: false
+#    register-with-eureka: false
+#    serviceUrl:
+##      defaultZone: http://${eureka.username:zcg}:${eureka.password:123456}@localhost:8761/eureka/
+#
+#---
+#spring:
+#  profiles: peer01
+#
+#eureka:
+#  instance:
+#    hostname: ${eureka.instance.hostname}
+#    metadata-map:
+#      instanceId: ${spring.application.name}:${random.value}
+#  client:
+#    serviceUrl:
+##      defaultZone: http://${eureka.username:zcg}:${eureka.password:123456}@${eureka.defaultZone.host}:${eureka.defaultZone.port:8761}/eureka/
+#
+#---
+#spring:
+#  profiles: peer02
+#
+#eureka:
+#  instance:
+#    hostname: ${eureka.instance.hostname}
+#    metadata-map:
+#      instanceId: ${spring.application.name}:${random.value}
+#  client:
+#    serviceUrl:
+##      defaultZone: http://${eureka.username:zcg}:${eureka.password:123456}@${eureka.defaultZone.host}:${eureka.defaultZone.port:8761}/eureka/
